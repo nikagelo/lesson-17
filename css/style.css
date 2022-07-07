@@ -1,0 +1,47 @@
+#button {
+  width: 400px;
+  height: 50px;
+  background-color: pink;
+  border: none;
+  border-radius: 28px;
+}
+.hidden {
+  display: none;
+}
+#characters_list {
+  background-color: rgba(0, 0, 117, 0.766);
+  width: 1000px;
+  padding: 20px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+#characters_list img {
+  width: 100px;
+  height: 100px;
+}
+
+.card {
+  background-color: white;
+  margin: 20px;
+  width: 400px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row-reverse;
+  border-radius: 5px;
+}
+.txt_wrapper {
+  margin-top: 20px;
+}
+.txt_wrapper p {
+  margin-top: 10px;
+}
+
+.txt_wrapper :first-child {
+  font-size: 24px;
+}
+.image {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
