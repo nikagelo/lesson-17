@@ -65,10 +65,10 @@ const allTxt_wrapper = document.querySelectorAll("txt_wrapper");
 const wholeCard = document.getElementById("card");
 const txt = document.getElementById("txt_wrapper");
 const divBlock2 = document.createElement("div");
-divBlock2.innerHTML = `<div class="closing"><div><img id="close" src=../images/close.svg></div>
+divBlock2.innerHTML = `<div class="closing"><div><img id="close" src=images/close.svg></div>
 </div>`;
 const divBlock3 = document.createElement("div");
-divBlock3.innerHTML = `<div class="add"><div><img id="close" src=../images/add.svg></div></div>`;
+divBlock3.innerHTML = `<div class="add"><div><img id="close" src=images/add.svg></div></div>`;
 const blockWrapper = document.createElement("div");
 blockWrapper.classList.add("block_wrapper");
 wholeCard.append(blockWrapper);
