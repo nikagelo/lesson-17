@@ -16,7 +16,7 @@ divBlock.classList.add("image");
 divBlock.innerHTML = ` <img class=image src="https://picsum.photos/id/1/200/300" alt="image" >`;
 body.append(divBlock);
 
-//Third
+//Fourth
 const characters = [
   {
     first_name: "Harry",
@@ -49,7 +49,7 @@ const characters = [
 ];
 function renderCards(userArr) {
   const characterCard = userArr.map((el) => {
-    return `<div class= card><img src='${el.image}'><div class=txt_wrapper><p>${el.first_name} ${el.last_name}</p><p>House: ${el.house}</p></div></div>`;
+    return `<div id=card><img src='${el.image}'><div id=txt_wrapper><p>${el.first_name} ${el.last_name}</p><p>House: ${el.house}</p><p>Actor: ${el.actor}</p> </div></div>`;
   });
 
   return characterCard;
@@ -60,3 +60,37 @@ const characters_li = document.getElementById("characters_list");
 
 let charactersHTML = renderCards(characters).join("");
 characters_li.innerHTML = stringVersion;
+// Fifth
+const allTxt_wrapper = document.querySelectorAll("txt_wrapper");
+const wholeCard = document.getElementById("card");
+const txt = document.getElementById("txt_wrapper");
+const divBlock2 = document.createElement("div");
+divBlock2.innerHTML = `<div class="closing"><div><img id="close" src=../images/close.svg></div>
+</div>`;
+const divBlock3 = document.createElement("div");
+divBlock3.innerHTML = `<div class="add"><div><img id="close" src=../images/add.svg></div></div>`;
+const blockWrapper = document.createElement("div");
+blockWrapper.classList.add("block_wrapper");
+wholeCard.append(blockWrapper);
+blockWrapper.append(divBlock3);
+blockWrapper.append(divBlock2);
+
+const allP = document.querySelectorAll("p");
+const thirdP = allP[2];
+thirdP.classList.add("hidden");
+
+const seeMoreBtn = document.querySelector(".add");
+function seeMore(e) {
+  e.stopPropagation();
+
+  thirdP.classList.toggle("hidden");
+}
+
+seeMoreBtn.addEventListener("click", seeMore);
+
+function deleteCard(el) {
+  el.stopPropagation();
+  txt.classList.toggle("hidden");
+}
+
+divBlock2.addEventListener("click", deleteCard);

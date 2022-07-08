@@ -17,11 +17,13 @@
   flex-wrap: wrap;
 }
 #characters_list img {
+  margin-top: 20px;
+  margin-bottom: 20px;
   width: 100px;
   height: 100px;
 }
 
-.card {
+#card {
   background-color: white;
   margin: 20px;
   width: 400px;
@@ -30,7 +32,7 @@
   flex-direction: row-reverse;
   border-radius: 5px;
 }
-.txt_wrapper {
+#txt_wrapper {
   margin-top: 20px;
 }
 .txt_wrapper p {
@@ -44,4 +46,21 @@
   display: flex;
   justify-content: center;
   margin-top: 50px;
+}
+.add div #close {
+  margin-top: 20px;
+  width: 30px;
+  height: 30px;
+}
+.closing div #close {
+  margin-top: 20px;
+  width: 30px;
+  height: 30px;
+}
+.closing {
+  display: flex;
+  flex-direction: column;
+}
+.closing :first-child {
+  margin-right: 50px;
 }
