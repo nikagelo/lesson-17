@@ -64,3 +64,6 @@
 .closing :first-child {
   margin-right: 50px;
 }
+.visible {
+  display: block;
+}

@@ -50,6 +50,10 @@ const characters = [
 function renderCards(userArr) {
   const characterCard = userArr.map((el) => {
     return `<div id=card><img src='${el.image}'><div id=txt_wrapper><p>${el.first_name} ${el.last_name}</p><p>House: ${el.house}</p><p>Actor: ${el.actor}</p> </div></div>`;
+
+    // ეს კოდი ამატებს ყველა card-ზე icon-ებს მაგრამ მათზე კლიკით მოქმედება ვეღარ დავამატე
+    //return `<div id=card><img src='${el.image}'><div id=txt_wrapper><p>${el.first_name} ${el.last_name}</p><p>House: ${el.house}</p><p class="hidden">Actor: ${el.actor}</p><div></div><img id="close" src=images/close.svg><img id="add" src=images/add.svg></div></div>`;
+    //});
   });
 
   return characterCard;
